@@ -13,6 +13,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   
+ 	<!-- Contém as extensões utilizadas no núcleo do Quarkus -->
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>3.5.0</quarkus.platform.version>
@@ -34,6 +35,10 @@
   </dependencyManagement>
   
   <dependencies>
+	<!-- 
+		Extensão que dá suporte a criação de aplicações REST.
+		Também fornece a funcionalidade de CDI.
+	-->
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-reactive</artifactId>
@@ -56,6 +61,10 @@
   
   <build>
     <plugins>
+      <!-- 
+        Plugin responsável pelo empacotamento da aplicação e 
+        também fornece o modo de desenvolvimento 
+      -->
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
